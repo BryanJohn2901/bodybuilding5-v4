@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão Mestres da Musculação | Especialistas</title>
+    <meta name="description" content="A imersão para personais que querem dominar hipertrofia e estética com o raciocínio de quem é referência no bodybuilding brasileiro">
+    <link rel="icon" type="image/svg+xml" href="img/logoPta.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#000000',
+                        'brand-night': '#050505',
+                        'brand-navy': '#02060D',
+                        'brand-darkgray': '#121212',
+                        'brand-anthracite': '#1A1A1A',
+                        'brand-gray-600': '#4B5563',
+                        'brand-gray-500': '#6B7280',
+                        'brand-gray-400': '#9CA3AF',
+                        'brand-gray-300': '#D1D5DB',
+                        'brand-gray-200': '#E5E7EB',
+                        'brand-primary': '#DC2626',
+                        'brand-accent': '#B91C1C',
+                        'brand-success': '#22C55E',
+                        'brand-gold': '#F59E0B',
+                        'brand-bg': '#050505',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Oswald', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('img/bgHeroAtualizado.webp')",
+                        'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')"
+                    },
+                    keyframes: {
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' },
+                        }
+                    },
+                    animation: {
+                        'shimmer': 'shimmer 2s infinite linear',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        @media (min-width: 1024px) {
+            body, a, button, input, textarea, summary, select { cursor: none !important; }
+        }
+        .custom-cursor-dot, .custom-cursor-outline {
+            position: fixed; top: 0; left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%; z-index: 99999;
+            pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .custom-cursor-dot { width: 6px; height: 6px; background-color: #DC2626; transition: width 0.2s ease, height 0.2s ease; }
+        .custom-cursor-outline {
+            width: 40px; height: 40px; border: 1px solid rgba(220, 38, 38, 0.5);
+            transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .cursor-hover .custom-cursor-dot { width: 0; height: 0; }
+        .cursor-hover .custom-cursor-outline {
+            width: 60px; height: 60px;
+            background-color: rgba(220, 38, 38, 0.05);
+            border-color: rgba(220, 38, 38, 0.8);
+        }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-brand-bg text-gray-300 font-sans antialiased overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+    <div class="custom-cursor-dot hidden lg:block"></div>
+    <div class="custom-cursor-outline hidden lg:block"></div>
+
+    <nav class="fixed top-6 left-0 right-0 z-50 px-4 md:px-0 hidden md:block" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container mx-auto max-w-5xl">
+            <div class="relative flex items-center justify-between px-6 py-3 rounded-full glass-panel shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] transition-all duration-500 ease-out hover:border-brand-primary/30 hover:shadow-[0_10px_40px_0_rgba(220,38,38,0.1)]">
+                
+                <a href="#" class="block hover:opacity-80 transition-opacity duration-300 flex items-center shrink-0">
+                    <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-10 w-auto"> 
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#problema" class="text-xs font-bold uppercase tracking-[0.1em] text-gray-400 hover:text-white transition-colors duration-300 ease-out relative group">
+                        O Problema
+                        <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-brand-primary transition-all duration-300 ease-out group-hover:w-full group-hover:left-0"></span>
+                    </a>
+                    <a href="#conteudo" class="text-xs font-bold uppercase tracking-[0.1em] text-gray-400 hover:text-white transition-colors duration-300 ease-out relative group">
+                        O Método
+                        <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-brand-primary transition-all duration-300 ease-out group-hover:w-full group-hover:left-0"></span>
+                    </a>
+                    <a href="#professores" class="text-xs font-bold uppercase tracking-[0.1em] text-gray-400 hover:text-white transition-colors duration-300 ease-out relative group">
+                        Especialistas
+                        <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-brand-primary transition-all duration-300 ease-out group-hover:w-full group-hover:left-0"></span>
+                    </a>
+                    <a href="#checkout" class="text-xs font-bold uppercase tracking-[0.1em] text-gray-400 hover:text-white transition-colors duration-300 ease-out relative group">
+                        Ingressos
+                        <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-brand-primary transition-all duration-300 ease-out group-hover:w-full group-hover:left-0"></span>
+                    </a>
+                </div>
+
+                <a href="#checkout" class="js-open-modal group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-accent px-10 py-4 transition-all duration-500 ease-out shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_40px_rgba(220,38,38,0.5)] cursor-pointer border-0">
+                    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+                    <span class="relative text-xs font-bold uppercase tracking-[0.2em] text-white">
+                        Inscreva-se
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-brand-bg">
+            <div
+                class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 md:hidden"
+                style="background-image: url('img/Prancheta 1-1.png');"
+            ></div>
+            <div
+                class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 hidden md:block"
+                style="background-image: url('img/Prancheta 1.png');"
+            ></div>
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/60 to-transparent md:w-2/3"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-5xl flex flex-col items-start text-left">
+                    <img src="img/logo.svg" alt="Logo" class="h-10 md:h-12 mt-0 md:mt-6 mb-8" data-aos="fade-down">
+                    
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl lg:leading-[1.10] font-black text-white uppercase tracking-tight mb-6 max-w-3xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]" data-aos="fade-up">
+                        A imersão para personais que querem dominar <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">hipertrofia e estética</span> com o raciocínio de quem é referência no bodybuilding brasileiro
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,1)] font-light" data-aos="fade-up" data-aos-delay="100">
+                        Em um único domingo, ao vivo e online, você vai aprender com 4 nomes gigantes da musculação como pensar prescrição, execução, biomecânica e construção de resultado estético em nível muito mais alto.
+                    </p>
+
+                    <div class="inline-block border border-brand-primary/30 bg-brand-primary/10 backdrop-blur-md px-6 py-3 rounded-xl mb-10 text-base md:text-lg text-white shadow-[0_10px_30px_rgba(0,0,0,0.5)]" data-aos="zoom-in" data-aos-delay="200">
+                        Com <span class="font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">Walter Krause, Belmiro de Salles, Carlos Garon e Gustavo Zorzi.</span>
+                    </div>
+
+                    <button class="js-open-modal w-full sm:w-auto bg-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 mb-6" data-aos="zoom-in" data-aos-delay="400">
+                        Quero garantir meu ingresso
+                    </button>
+
+                    <div class="grid grid-cols-1 gap-y-4 text-xs md:text-sm text-gray-200 uppercase tracking-widest font-bold max-w-2xl drop-shadow-[0_2px_6px_rgba(0,0,0,1)]" data-aos="fade-up" data-aos-delay="500">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-video text-brand-primary w-5 text-center"></i> 
+                            Ao vivo e online
+                        </span>
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-stopwatch text-brand-primary w-5 text-center"></i> 
+                            Vagas limitadas
+                        </span>
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-unlock text-brand-success w-5 text-center"></i> 
+                            Acesso liberado após confirmação
+                        </span>
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-ticket-alt text-brand-gold w-5 text-center"></i> 
+                            Beneficio exclusivo para inscritos com o Cupom Ouro PTA
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-brand-bg relative z-20">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="glass-panel p-8 md:p-12 rounded-3xl text-center border border-brand-primary/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden" data-aos="fade-up">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-brand-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
+                    <i class="fas fa-exclamation-triangle text-3xl md:text-5xl text-brand-primary/80 mb-6"></i>
+                    <p class="text-base sm:text-lg md:text-2xl text-gray-200 leading-relaxed font-light relative z-10 max-w-4xl mx-auto">
+                        Se você trabalha com alunos que querem shape, definição, volume e resultado visual, <span class="font-bold text-white">continuar prescrevendo de forma genérica custa caro:</span> no resultado do aluno, na sua autoridade e no valor que o mercado percebe no seu trabalho.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="para-quem" class="py-20 md:py-32 bg-brand-surface relative border-y border-white/5">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase mb-6 tracking-tight">
+                        Essa imersão <span class="text-brand-primary">não é</span> para qualquer profissional. É para quem quer subir de nível de verdade.
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-light">
+                        A Imersão Mestres da Musculação foi criada para o profissional que já entendeu uma coisa: atender bem não basta. Quem quer se destacar no universo da hipertrofia e da estética precisa dominar raciocínio técnico, leitura de execução, prescrição com critério e visão prática do que realmente gera resultado.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden border border-white/5 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group" data-aos="fade-right">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-success/5 blur-3xl transition-all duration-500 group-hover:bg-brand-success/10"></div>
+                        <h3 class="font-heading text-2xl text-white uppercase mb-8 pb-4 border-b border-white/10">Para quem é</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4"><i class="fas fa-check-circle text-brand-success text-xl shrink-0 mt-0.5 opacity-80"></i><span class="text-gray-300 font-light">Para personal trainers que querem sair da prescrição genérica</span></li>
+                            <li class="flex items-start gap-4"><i class="fas fa-check-circle text-brand-success text-xl shrink-0 mt-0.5 opacity-80"></i><span class="text-gray-300 font-light">Para profissionais que atendem alunos com foco em shape, hipertrofia e estética</span></li>
+                            <li class="flex items-start gap-4"><i class="fas fa-check-circle text-brand-success text-xl shrink-0 mt-0.5 opacity-80"></i><span class="text-gray-300 font-light">Para quem quer se tornar mais respeitado tecnicamente</span></li>
+                            <li class="flex items-start gap-4"><i class="fas fa-check-circle text-brand-success text-xl shrink-0 mt-0.5 opacity-80"></i><span class="text-gray-300 font-light">Para quem quer gerar mais resultado visual nos alunos</span></li>
+                            <li class="flex items-start gap-4"><i class="fas fa-check-circle text-brand-success text-xl shrink-0 mt-0.5 opacity-80"></i><span class="text-gray-300 font-light">Para quem quer aumentar valor percebido e parar de competir só por preço</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden bg-black/40 border border-white/5 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group" data-aos="fade-left">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 blur-3xl transition-all duration-500 group-hover:bg-brand-primary/10"></div>
+                        <h3 class="font-heading text-2xl text-gray-500 uppercase mb-8 pb-4 border-b border-white/5">Para quem não é</h3>
+                        <div class="flex items-start gap-4 opacity-70">
+                            <i class="fas fa-times-circle text-brand-primary text-2xl shrink-0"></i>
+                            <p class="text-gray-400 text-lg italic font-light">Essa imersão não é para quem procura motivação vazia, conteúdo raso ou teoria desconectada da prática.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#checkout" class="w-full md:w-auto bg-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 text-center">
+                        Quero garantir meu ingresso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="problema" class="py-20 md:py-32 bg-brand-bg relative overflow-hidden">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+                <h2 class="font-heading text-3xl md:text-5xl font-black text-white uppercase mb-8 md:mb-12 tracking-tight" data-aos="fade-up">
+                    O problema de muitos profissionais não é falta de esforço. <br class="hidden md:block">
+                    <span class="text-brand-primary">É falta de refinamento técnico.</span>
+                </h2>
+
+                <div class="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed">
+                        Muitos personais estudam, se dedicam e atendem bastante. Mesmo assim, continuam presos a uma <span class="text-white font-medium">prescrição comum</span>, com pouca clareza sobre progressão, estímulo, execução, biomecânica e construção de resultado estético consistente.
+                    </p>
+                </div>
+
+                <div class="mb-20">
+                    <p class="text-sm md:text-base font-bold text-brand-primary uppercase tracking-widest mb-8 md:mb-10" data-aos="fade-up" data-aos-delay="150">
+                        Na prática, isso gera três consequências:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8 text-left">
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group border-t-2 border-t-brand-primary/50 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:bg-brand-primary/20 transition-colors">
+                                <i class="fas fa-chart-line text-brand-primary text-lg"></i>
+                            </div>
+                            <p class="text-gray-200 text-lg font-light leading-relaxed">
+                                alunos treinando muito e evoluindo menos do que poderiam
+                            </p>
+                        </div>
+
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group border-t-2 border-t-brand-primary/50 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:bg-brand-primary/20 transition-colors">
+                                <i class="fas fa-users-slash text-brand-primary text-lg"></i>
+                            </div>
+                            <p class="text-gray-200 text-lg font-light leading-relaxed">
+                                dificuldade para se diferenciar de outros profissionais
+                            </p>
+                        </div>
+
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group border-t-2 border-t-brand-primary/50 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:bg-brand-primary/20 transition-colors">
+                                <i class="fas fa-lock text-brand-primary text-lg"></i>
+                            </div>
+                            <p class="text-gray-200 text-lg font-light leading-relaxed">
+                                limitação de autoridade e de valor percebido
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto glass-panel p-8 md:p-14 rounded-3xl border border-white/10 shadow-2xl" data-aos="zoom-in" data-aos-delay="500">
+                    <p class="text-lg md:text-xl text-gray-300 font-light mb-4">
+                        Se você quer ser visto como referência em estética corporal e hipertrofia, não basta treinar forte.
+                    </p>
+                    <p class="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight mb-8 md:mb-10">
+                        É preciso aprender a <span class="text-brand-primary drop-shadow-[0_0_10px_rgba(220,38,38,0.5)]">pensar treino em outro nível.</span>
+                    </p>
+                    
+                    <a href="#checkout" class="w-full md:w-auto inline-block bg-transparent border border-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-primary transition-all duration-500 ease-out shadow-[0_0_20px_rgba(220,38,38,0.1)] hover:shadow-[0_0_40px_rgba(220,38,38,0.3)] hover:-translate-y-1">
+                        Quero aprender com os mestres da musculação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="conteudo" class="py-20 md:py-32 bg-brand-surface relative border-y border-white/5 overflow-hidden">
+            <div class="absolute inset-0 bg-texture-pattern opacity-[0.02] pointer-events-none"></div>
+            <div class="absolute -right-20 top-40 w-80 h-80 bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+        
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-16 md:mb-24" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase mb-6 tracking-tighter">
+                        O que você vai <span class="text-brand-primary drop-shadow-[0_0_15px_rgba(220,38,38,0.2)]">levar</span> dessa imersão
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-primary/50 mx-auto rounded-full"></div>
+                </div>
+        
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-24">
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-brain text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como raciocinar a prescrição de hipertrofia com mais critério e menos achismo
+                        </p>
+                    </div>
+        
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-dumbbell text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como ajustar treino, execução e leitura de movimento para gerar resultado estético mais consistente
+                        </p>
+                    </div>
+        
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-eye text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como enxergar detalhes que diferenciam um treino comum de um treino realmente eficiente
+                        </p>
+                    </div>
+        
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-microscope text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como aplicar conceitos de biomecânica e musculação de forma prática no seu dia a dia
+                        </p>
+                    </div>
+        
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-shield-alt text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como elevar sua segurança técnica para atender alunos que querem shape de verdade
+                        </p>
+                    </div>
+        
+                    <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-primary/40 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-500">
+                            <i class="fas fa-medal text-xl text-brand-primary opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed font-light group-hover:text-white transition-colors">
+                            Como aumentar sua autoridade profissional por dominar o que a maioria ainda executa no automático
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="max-w-5xl mx-auto" data-aos="zoom-in">
+                    <div class="relative bg-brand-night p-8 md:p-14 rounded-3xl border border-white/10 text-center flex flex-col items-center gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                        <h4 class="font-heading text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">
+                            Você não vai assistir a uma sequência de aulas soltas.
+                        </h4>
+                        <div class="w-12 h-px bg-brand-primary/50 my-2"></div>
+                        <p class="text-lg md:text-xl text-gray-400 font-light max-w-3xl">
+                            Vai passar um domingo inteiro em contato com a forma de pensar de profissionais que vivem a musculação e a formação de treinadores em altíssimo nível.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#checkout" class="w-full md:w-auto bg-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 text-center">
+                        Quero garantir meu ingresso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="professores" class="py-20 md:py-32 bg-brand-bg relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+            
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-16 md:mb-24" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase mb-6 tracking-tighter">
+                        Aprenda com quem ajudou a moldar a <span class="text-brand-primary">visão técnica</span> da musculação no Brasil
+                    </h2>
+                    <div class="space-y-2 max-w-3xl mx-auto">
+                        <p class="text-gray-400 text-lg md:text-xl font-light">
+                            Você pode consumir conteúdo gratuito por anos e ainda continuar com uma visão fragmentada de treino.
+                        </p>
+                        <p class="text-white text-lg md:text-xl font-medium uppercase tracking-wide">
+                            Ou pode acelerar sua evolução aprendendo com quem reúne ciência, prática, didática e vivência real de prescrição.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up">
+                        <div class="aspect-[16/9] w-full overflow-hidden relative">
+                            <img src="img/walter.webp" alt="Walter Krause" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-night via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <span class="inline-block bg-brand-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
+                                Musculação e Estética
+                            </span>
+                            <h3 class="font-heading text-3xl font-bold text-white uppercase mb-3 tracking-tight">Walter Krause</h3>
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
+                                Especialista em musculação e treinamento estético, com uma abordagem que une conhecimento científico e aplicação prática para desenvolver raciocínio de prescrição e estratégias eficientes de hipertrofia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="aspect-[16/9] w-full overflow-hidden relative">
+                            <img src="img/belmiro.webp" alt="Belmiro de Salles" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-night via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <span class="inline-block bg-brand-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
+                                Treinamento Físico
+                            </span>
+                            <h3 class="font-heading text-3xl font-bold text-white uppercase mb-3 tracking-tight">Belmiro de Salles</h3>
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
+                                Referência em treinamento físico e musculação, reconhecido por traduzir conceitos complexos em métodos claros e aplicáveis ao desenvolvimento de físicos de alto nível.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="aspect-[16/9] w-full overflow-hidden relative">
+                            <img src="img/garon.webp" alt="Carlos Garon" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-night via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <span class="inline-block bg-brand-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
+                                Força e Biomecânica
+                            </span>
+                            <h3 class="font-heading text-3xl font-bold text-white uppercase mb-3 tracking-tight">Carlos Garon</h3>
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
+                                Especialista em treinamento de força e biomecânica, com didática voltada para melhorar leitura de movimento e estruturação de treinos mais eficientes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-brand-primary/30 transition-all duration-500 ease-out shadow-xl group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                        <div class="aspect-[16/9] w-full overflow-hidden relative">
+                            <img src="img/zorzi.webp" alt="Gustavo Zorzi" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-night via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <span class="inline-block bg-brand-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
+                                Ciências do Movimento
+                            </span>
+                            <h3 class="font-heading text-3xl font-bold text-white uppercase mb-3 tracking-tight">Gustavo Zorzi</h3>
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
+                                Mestre em Ciências do Movimento Humano, especialista em biomecânica, musculação e fisiologia do exercício, com forte atuação em docência, treinamento e formação profissional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16 md:mt-24" data-aos="zoom-in">
+                    <a href="#checkout" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-accent px-12 py-5 transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 border-0">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+                        <span class="relative font-heading text-xl font-bold uppercase tracking-widest text-white">
+                            Quero garantir meu acesso agora
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout" class="py-24 bg-brand-surface relative border-y border-white/5 overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[200px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-4 max-w-5xl relative z-10">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase mb-4 tracking-tight">
+                        Um domingo de imersão técnica que pode <span class="text-brand-primary">encurtar anos</span> de tentativa, erro e prescrição comum
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-300 font-light">Ao vivo, online, com acesso liberado após confirmação da inscrição.</p>
+                </div>
+
+                <div class="glass-panel rounded-3xl p-1 md:p-2 shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10" data-aos="zoom-in">
+                    <div class="bg-brand-bg rounded-[22px] p-6 md:p-12 flex flex-col lg:flex-row gap-12 items-center">
+                        
+                        <div class="flex-1 w-full lg:pr-8 lg:border-r border-white/10">
+                            <ul class="space-y-4 mb-8 text-gray-300 font-light">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-success mt-1 opacity-80"></i> <span>Imersão online ao vivo</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-success mt-1 opacity-80"></i> <span>Conteúdo direto ao ponto com 4 referências do setor</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-success mt-1 opacity-80"></i> <span>Material de apoio digital</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-success mt-1 opacity-80"></i> <span>Certificado de participação</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-success mt-1 opacity-80"></i> <span>Beneficio exclusivo com Cupom Ouro PTA</span></li>
+                            </ul>
+
+                            <div class="bg-white/5 border border-white/5 p-4 rounded-xl mb-8 flex items-center gap-4">
+                                <i class="fas fa-calendar-alt text-brand-primary/80 text-3xl"></i>
+                                <div>
+                                    <p class="text-white font-bold uppercase text-sm">Domingo, 19 de abril de 2026</p>
+                                    <p class="text-gray-400 text-sm font-light">08h30 às 16h30</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <p class="text-gray-500 font-heading text-2xl line-through opacity-70">De R$ 197</p>
+                                <div class="flex items-end gap-2 text-white">
+                                    <span class="font-heading text-2xl font-bold pb-2">por apenas R$</span>
+                                    <span class="text-7xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">47</span>
+                                </div>
+                            </div>
+
+                            <p class="text-sm text-gray-500 italic font-light">
+                                Pelo valor de uma decisão pequena, você acessa uma imersão com nomes que carregam anos de prática, estudo e formação de profissionais dentro da musculação.
+                            </p>
+                        </div>
+
+                        <div class="flex-1 w-full">
+                            <div class="text-center mb-6">
+                                <h3 class="font-heading text-2xl font-bold text-white uppercase mb-1">Garantir Inscrição</h3>
+                                <p class="text-sm text-gray-400 font-light">As vagas são limitadas. Quando o lote virar, essa condição deixa de existir.</p>
+                            </div>
+
+                            <form id="form_checkout_inline" class="space-y-4 mt-6 popup-form">
+                                <div>
+                                    <label for="lead-nome-inline" class="block text-sm font-medium text-gray-400 mb-1">Nome</label>
+                                    <input type="text" id="lead-nome-inline" name="nome" required placeholder="Seu nome completo"
+                                        class="w-full px-4 py-3 rounded-lg bg-brand-surface border border-white/5 text-white placeholder-gray-600 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-colors duration-300">
+                                </div>
+                                <div>
+                                    <label for="lead-email-inline" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                                    <input type="email" id="lead-email-inline" name="email" required placeholder="seu@email.com"
+                                        class="w-full px-4 py-3 rounded-lg bg-brand-surface border border-white/5 text-white placeholder-gray-600 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-colors duration-300">
+                                </div>
+                                <div>
+                                    <label for="lead-phone-inline" class="block text-sm font-medium text-gray-400 mb-1">Telefone</label>
+                                    <div class="flex rounded-lg overflow-hidden border border-white/5 focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary bg-brand-surface transition-colors duration-300">
+                                        <span class="inline-flex items-center px-4 py-3 bg-brand-primary text-white font-bold select-none shrink-0">+55</span>
+                                        <input type="tel" id="lead-phone-inline" name="phone" required placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel"
+                                            class="flex-1 px-4 py-3 bg-transparent text-white placeholder-gray-600 outline-none min-w-0 mask-telefone">
+                                    </div>
+                                    <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
+                                </div>
+                                <button type="submit" class="w-full bg-brand-primary text-white font-heading font-bold text-lg uppercase tracking-widest py-4 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_20px_rgba(220,38,38,0.2)] hover:shadow-[0_0_40px_rgba(220,38,38,0.4)] hover:-translate-y-1 btn-submit mt-2">
+                                    Garantir meu ingresso agora
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficio" class="py-24 bg-brand-bg relative">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-2/5 flex justify-center order-2 md:order-1 relative" data-aos="fade-right">
+                        <div class="absolute w-64 h-64 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+                        <img src="img/ticket%20dourado%20(2).webp" alt="Cupom Ouro PTA" class="w-full max-w-sm relative z-10 drop-shadow-[0_10px_30px_rgba(245,158,11,0.2)]">
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-6 order-1 md:order-2 text-center md:text-left" data-aos="fade-left">
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase tracking-tight">
+                            Além da imersão, você ainda garante um benefício <span class="text-brand-gold">reservado apenas para inscritos</span>
+                        </h2>
+                        <p class="text-gray-300 text-lg font-light">Ao participar da Imersão Mestres da Musculação, você libera o Cupom Ouro PTA: uma condição especial para matricula na nossa Pós-graduação, acessível somente para quem estiver inscrito no evento.</p>
+                        <p class="text-gray-300 text-lg font-light">Ou seja: além de viver uma imersão técnica com grandes nomes, você ainda abre uma porta estratégica para o próximo nível da sua formação.</p>
+                        
+                        <div class="bg-brand-gold/5 border border-brand-gold/20 p-4 rounded-xl inline-block mt-2">
+                            <p class="text-brand-gold text-sm font-medium"><i class="fas fa-exclamation-triangle mr-2 opacity-80"></i> Observação: O Cupom Ouro PTA é um benefício exclusivo para participantes da imersão.</p>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="#checkout" class="inline-block w-full md:w-auto bg-transparent border border-brand-gold text-brand-gold font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-gold hover:text-white transition-all duration-500 ease-out shadow-[0_0_20px_rgba(245,158,11,0.1)] hover:shadow-[0_0_40px_rgba(245,158,11,0.3)] hover:-translate-y-1">
+                                Quero garantir meu cupom e minha vaga
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="garantia" class="py-16 bg-brand-surface relative border-y border-white/5">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto glass-panel p-8 md:p-12 rounded-3xl border border-white/5 shadow-xl" data-aos="zoom-in">
+                    <div class="w-24 h-24 shrink-0 bg-brand-success/10 rounded-full flex items-center justify-center border border-brand-success/30 shadow-[0_0_30px_rgba(22,163,74,0.2)]">
+                        <i class="fas fa-shield-alt text-5xl text-brand-success/80"></i>
+                    </div>
+                    <div class="text-center md:text-left space-y-3">
+                        <h3 class="font-heading text-3xl font-bold text-white uppercase tracking-tight">Seu risco é zero por 7 dias</h3>
+                        <p class="text-gray-400 text-lg font-light leading-relaxed">Você pode se inscrever e avaliar com tranquilidade. Se dentro de 7 dias entender que a imersão não faz sentido para o seu momento, devolvemos 100% do seu investimento. Sem burocracia.</p>
+                        <ul class="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-medium text-brand-success/90 uppercase tracking-wider pt-2">
+                            <li><i class="fas fa-check mr-1"></i> Garantia incondicional de 7 dias</li>
+                            <li><i class="fas fa-lock mr-1"></i> Compra protegida</li>
+                            <li><i class="fas fa-shield-check mr-1"></i> Ambiente de pagamento seguro</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#checkout" class="w-full md:w-auto bg-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 text-center">
+                        Quero garantir meu ingresso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-brand-bg relative border-b border-white/5">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">FAQ</h2>
+                </div>
+                
+                <div class="space-y-4" data-aos="fade-up">
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>1. A imersão vai ficar gravada?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Se houver gravação, informe aqui de forma objetiva. Se não houver, deixe isso claro para evitar atrito e desalinhamento de expectativa.</div>
+                    </details>
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>2. Para quem é este evento?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Para personal trainers e profissionais que desejam aprofundar seu dominio em hipertrofia, estética corporal, musculação e prescrição de treino com uma visão mais técnica e aplicada.</div>
+                    </details>
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>3. Como funciona o Cupom Ouro PTA?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Ao se inscrever na imersão, você libera uma condição exclusiva para matrícula na Pós-graduação. Esse benefício é reservado apenas aos participantes do evento.</div>
+                    </details>
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>4. Como vou receber meu acesso?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Após a confirmação da inscrição, você recebe as orientações e o acesso para acompanhar a imersão online.</div>
+                    </details>
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>5. Essa imersão serve para quem já atua há anos?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Sim. A proposta não é ensinar o básico, mas elevar a forma de pensar e aplicar musculação, biomecânica e hipertrofia na prática profissional.</div>
+                    </details>
+                    <details class="glass-panel border border-white/5 rounded-xl group hover:border-brand-primary/30 transition-colors duration-300">
+                        <summary class="flex justify-between items-center font-medium p-6 text-gray-200 cursor-pointer hover:text-white">
+                            <span>6. E se eu estiver começando agora?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180"><i class="fas fa-chevron-down text-brand-primary/80"></i></span>
+                        </summary>
+                        <div class="text-gray-400 p-6 pt-0 border-t border-white/5 mt-2 font-light">Se você quer encurtar caminho e construir uma base muito mais sólida desde cedo, essa imersão também faz sentido.</div>
+                    </details>
+                </div>
+
+                <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#checkout" class="w-full md:w-auto bg-brand-primary text-white font-heading font-bold text-lg md:text-xl uppercase tracking-widest py-4 md:py-5 px-8 md:px-12 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 text-center">
+                        Quero garantir meu ingresso
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="fechamento" class="py-24 bg-brand-bg relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+            
+            <div class="container mx-auto px-4 max-w-5xl relative z-10">
+                <div class="glass-panel p-8 md:p-16 rounded-[40px] border border-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.8)] relative overflow-hidden" data-aos="zoom-in">
+                    
+                    <div class="absolute inset-0 bg-texture-pattern opacity-[0.03] pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 blur-[80px] pointer-events-none"></div>
+
+                    <div class="text-center max-w-3xl mx-auto relative z-10">
+                        <h2 class="font-heading text-3xl md:text-5xl font-black text-white uppercase mb-8 leading-[1.2] tracking-tight">
+                            Se você quer continuar sendo mais um no mercado, qualquer conteúdo serve. <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent drop-shadow-[0_0_10px_rgba(220,38,38,0.2)]">Se quer se tornar referência em hipertrofia e estética, essa é a hora de entrar.</span>
+                        </h2>
+                        
+                        <div class="text-lg md:text-xl text-gray-300 space-y-4 mb-12 font-light leading-relaxed">
+                            <p>Você já sabe que o mercado não recompensa o profissional comum.</p>
+                            <p>Ele recompensa quem entrega resultado, transmite segurança e domina o que a maioria ainda faz no automático.</p>
+                            <p class="font-medium text-white mt-6 pt-6 border-t border-white/10 inline-block">A Imersão Mestres da Musculação foi criada para quem quer atravessar essa ponte. Agora a decisão é sua.</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                            <div class="bg-black/40 border border-white/5 rounded-2xl p-4 text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-video text-brand-primary/80 mb-2 text-xl"></i>
+                                <p class="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">Ao vivo e online</p>
+                            </div>
+                            <div class="bg-black/40 border border-white/5 rounded-2xl p-4 text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-calendar-alt text-brand-primary/80 mb-2 text-xl"></i>
+                                <p class="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">19 de abril de 2026</p>
+                            </div>
+                            <div class="bg-black/40 border border-white/5 rounded-2xl p-4 text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-users text-brand-primary/80 mb-2 text-xl"></i>
+                                <p class="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">4 grandes nomes</p>
+                            </div>
+                            <div class="bg-black/40 border border-white/5 rounded-2xl p-4 text-center flex flex-col items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0 bg-brand-gold/5"></div>
+                                <i class="fas fa-ticket-alt text-brand-gold/80 mb-2 text-xl relative z-10"></i>
+                                <p class="text-[10px] sm:text-xs font-bold text-brand-gold/80 uppercase tracking-widest relative z-10">Condição especial</p>
+                            </div>
+                        </div>
+
+                        <a href="#checkout" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-accent px-12 py-5 transition-all duration-500 ease-out shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:shadow-[0_0_50px_rgba(220,38,38,0.5)] hover:-translate-y-1 border-0 w-full md:w-auto">
+                            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+                            <span class="relative font-heading text-xl font-bold uppercase tracking-widest text-white">
+                                Quero garantir meu ingresso
+                            </span>
+                        </a>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mt-6">Vagas limitadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-bg border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 mb-16">
+                <div class="max-w-xs text-center md:text-left">
+                    <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-10 w-auto mb-6 mx-auto md:mx-0 opacity-80">
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        A Imersão Mestres da Musculação foi criada para quem quer atravessar a ponte entre o básico e o nível referência em estética corporal.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <h4 class="font-heading text-white uppercase tracking-widest text-sm mb-2">Navegação</h4>
+                    <a href="#hero" class="text-gray-500 hover:text-brand-primary transition-colors duration-300 text-sm uppercase font-bold tracking-tighter">Início</a>
+                    <a href="#problema" class="text-gray-500 hover:text-brand-primary transition-colors duration-300 text-sm uppercase font-bold tracking-tighter">O Problema</a>
+                    <a href="#professores" class="text-gray-500 hover:text-brand-primary transition-colors duration-300 text-sm uppercase font-bold tracking-tighter">Especialistas</a>
+                    <a href="#checkout" class="text-gray-500 hover:text-brand-primary transition-colors duration-300 text-sm uppercase font-bold tracking-tighter">Ingressos</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <h4 class="font-heading text-white uppercase tracking-widest text-sm mb-2">O Evento</h4>
+                    <span class="text-gray-500 text-sm font-light"><i class="fas fa-calendar-alt text-brand-primary/80 mr-2"></i> 19 de Abril de 2026</span>
+                    <span class="text-gray-500 text-sm font-light"><i class="fas fa-clock text-brand-primary/80 mr-2"></i> 08h30 às 16h30</span>
+                    <span class="text-gray-500 text-sm font-light"><i class="fas fa-video text-brand-primary/80 mr-2"></i> Ao vivo e Online</span>
+                </div>
+            </div>
+
+            <hr class="border-white/5 mb-10">
+
+            <div class="text-center space-y-6">
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-gray-600 text-[10px] uppercase tracking-widest leading-relaxed opacity-50">
+                        ESTE SITE NÃO É DO FACEBOOK OU DO GOOGLE. ALÉM DISSO, ESTE SITE NÃO É ENDOSSADO PELO FACEBOOK OU GOOGLE DE QUALQUER MANEIRA. FACEBOOK E GOOGLE SÃO MARCAS COMERCIAIS INDEPENDENTES.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-gray-500 text-xs font-medium">
+                    <p>&copy; 2026 MESTRES DA MUSCULAÇÃO. TODOS OS DIREITOS RESERVADOS.</p>
+                    <span class="hidden md:block opacity-30">|</span>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-white transition-colors duration-300">POLÍTICAS DE PRIVACIDADE</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">TERMOS DE USO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
+    </footer>
+
+    <div id="capture-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300">
+        <div class="relative bg-brand-surface border border-white/10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] max-w-md w-full p-8 transform scale-95 transition-all duration-300 ease-out" id="modal-content">
+            <button type="button" class="js-close-modal absolute top-4 right-4 w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary/20 flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fas fa-times pointer-events-none"></i>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="font-heading text-2xl font-bold text-white uppercase mb-1">Garantir Inscrição</h3>
+                <p class="text-sm text-gray-400 font-light">Preencha os dados abaixo para acessar a oferta exclusiva.</p>
+            </div>
+
+            <form id="form_bb_modal" class="space-y-4 mt-6 popup-form">
+                <div>
+                    <label for="lead-nome" class="block text-sm font-medium text-gray-400 mb-1">Nome</label>
+                    <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo"
+                        class="w-full px-4 py-3 rounded-xl bg-brand-bg border border-white/5 text-white placeholder-gray-600 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-colors duration-300">
+                </div>
+                <div>
+                    <label for="lead-email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                    <input type="email" id="lead-email" name="email" required placeholder="seu@email.com"
+                        class="w-full px-4 py-3 rounded-xl bg-brand-bg border border-white/5 text-white placeholder-gray-600 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-colors duration-300">
+                </div>
+                <div>
+                    <label for="lead-phone" class="block text-sm font-medium text-gray-400 mb-1">Telefone</label>
+                    <div class="flex rounded-xl overflow-hidden border border-white/5 focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary bg-brand-bg transition-colors duration-300">
+                        <span class="inline-flex items-center px-4 py-3 bg-brand-primary text-white font-bold select-none shrink-0">+55</span>
+                        <input type="tel" id="lead-phone" name="phone" required placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel"
+                            class="flex-1 px-4 py-3 bg-transparent text-white placeholder-gray-600 outline-none min-w-0 mask-telefone">
+                    </div>
+                    <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
+                </div>
+                <button type="submit" class="w-full bg-brand-primary text-white font-heading font-bold text-lg uppercase tracking-widest py-4 rounded-xl hover:bg-brand-accent transition-all duration-500 ease-out shadow-[0_0_20px_rgba(220,38,38,0.2)] hover:shadow-[0_0_40px_rgba(220,38,38,0.4)] hover:-translate-y-1 btn-submit mt-4">
+                    Avançar para Pagamento
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
+
+            const WEBHOOK_URL = 'https://hook.us1.make.com/bj1q14346ezeybpcqjb9ctea89aoatvn?produto=I-BB5';
+            const REDIRECT_URL = 'https://sun.eduzz.com/39VEA7GKWR';
+            const PRODUTO_NOME = 'BodyBuilding 5';
+
+            if (window.innerWidth >= 1024) {
+                const dot = document.querySelector('.custom-cursor-dot');
+                const outline = document.querySelector('.custom-cursor-outline');
+                window.addEventListener('mousemove', (e) => {
+                    dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`;
+                    outline.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+                });
+                document.querySelectorAll('a, button, input, select, textarea, summary').forEach(el => {
+                    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+                });
+            }
+
+            const modal = document.getElementById('capture-modal');
+            const modalContent = document.getElementById('modal-content');
+            function openPopup(e) {
+                if(e) e.preventDefault();
+                document.body.style.overflow = 'hidden';
+                modal.classList.remove('hidden'); modal.classList.add('flex');
+                setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); modalContent.classList.add('scale-100'); }, 10);
+            }
+            function closePopup() {
+                modal.classList.add('opacity-0'); modalContent.classList.remove('scale-100'); modalContent.classList.add('scale-95');
+                setTimeout(() => { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }, 300);
+            }
+            document.querySelectorAll('.js-open-modal').forEach(btn => btn.addEventListener('click', openPopup));
+            document.querySelectorAll('.js-close-modal').forEach(btn => btn.addEventListener('click', closePopup));
+            modal.addEventListener('click', (e) => { if (e.target === modal) closePopup(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closePopup(); });
+
+            document.querySelectorAll('.mask-telefone').forEach(input => {
+                input.addEventListener('input', function(e) {
+                    let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+                    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+                    const form = this.closest('form');
+                    if(form) form.querySelector('.error-msg').classList.add('hidden');
+                });
+            });
+
+            function getUTMs() {
+                const params = new URLSearchParams(window.location.search);
+                let utms = {};
+                ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(param => {
+                    if (params.get(param)) utms[param] = params.get(param);
+                });
+                return utms;
+            }
+
+            document.querySelectorAll('.popup-form').forEach(form => {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const btnSubmit = this.querySelector('.btn-submit');
+                    const errorMsg = this.querySelector('.error-msg');
+                    const nome = this.querySelector('[name="nome"]').value.trim();
+                    const email = this.querySelector('[name="email"]').value.trim();
+                    const rawPhone = this.querySelector('[name="phone"]').value.replace(/\D/g, '');
+
+                    if (rawPhone.length < 10) { errorMsg.classList.remove('hidden'); return; }
+
+                    const telefoneFinal = '+55' + rawPhone;
+                    const utms = getUTMs();
+                    const urlAtual = window.location.href;
+
+                    const payload = { nome, email, telefone: telefoneFinal, ...utms, url: urlAtual, produto: PRODUTO_NOME };
+                    
+                    btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processando...';
+                    btnSubmit.disabled = true;
+
+                    try {
+                        await fetch(WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                    } catch (error) {
+                        console.error('Erro de envio:', error);
+                    } finally {
+                        const redirectParams = new URLSearchParams({ name: nome, email: email, phone: telefoneFinal, url: urlAtual, ...utms });
+                        window.location.href = `${REDIRECT_URL}?${redirectParams.toString()}`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
