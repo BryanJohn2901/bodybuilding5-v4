@@ -1,0 +1,25 @@
+{
+  "name": "bodybuilding5-v4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanJohn2901/bodybuilding5-v4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryanJohn2901/bodybuilding5-v4/issues"
+  },
+  "homepage": "https://github.com/BryanJohn2901/bodybuilding5-v4#readme",
+  "description": "",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.46.1"
+  }
+}
