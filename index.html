@@ -130,20 +130,18 @@
     </nav>
 
     <main>
-        <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-brand-bg">
-            <div
-                class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 md:hidden"
-                style="background-image: url('img/Prancheta 1-1.png');"
-            ></div>
-            <div
-                class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 hidden md:block"
-                style="background-image: url('img/Prancheta 1.png');"
-            ></div>
+        <section id="hero" class="relative min-h-screen flex flex-col md:flex-row items-center md:pt-28 pb-10 md:pb-20 overflow-hidden bg-brand-bg">
             
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/60 to-transparent md:w-2/3"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent"></div>
+            <div class="w-full h-[50vh] min-h-[350px] bg-top bg-no-repeat bg-cover block md:hidden relative" style="background-image: url('img/Prancheta 1-1.png');">
+                <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-bg to-transparent"></div>
+            </div>
 
-            <div class="container mx-auto px-4 relative z-10">
+            <div class="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 hidden md:block" style="background-image: url('img/Prancheta 1.png');"></div>
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/60 to-transparent md:w-2/3 hidden md:block"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent hidden md:block"></div>
+
+            <div class="container mx-auto px-4 relative z-10 pt-8 md:pt-0">
                 <div class="max-w-5xl flex flex-col items-start text-left">
                     <img src="img/logo.svg" alt="Logo" class="h-10 md:h-12 mt-0 md:mt-6 mb-8" data-aos="fade-down">
                     
@@ -226,7 +224,7 @@
                         <h3 class="font-heading text-2xl text-gray-500 uppercase mb-8 pb-4 border-b border-white/5">Para quem não é</h3>
                         <div class="flex items-start gap-4 opacity-70">
                             <i class="fas fa-times-circle text-brand-primary text-2xl shrink-0"></i>
-                            <p class="text-gray-400 text-lg italic font-light">Essa imersão não é para quem procura motivação vazia, conteúdo raso ou teoria desconectada da prática.</p>
+                            <p class="text-gray-400 text-lg font-light">Essa imersão não é para quem procura motivação vazia, conteúdo raso ou teoria desconectada da prática.</p>
                         </div>
                     </div>
                 </div>
@@ -526,7 +524,7 @@
                                 </div>
                             </div>
 
-                            <p class="text-sm text-gray-500 italic font-light">
+                            <p class="text-sm text-gray-500 font-light">
                                 Pelo valor de uma decisão pequena, você acessa uma imersão com nomes que carregam anos de prática, estudo e formação de profissionais dentro da musculação.
                             </p>
                         </div>
@@ -791,7 +789,7 @@
                 <p class="text-sm text-gray-400 font-light">Preencha os dados abaixo para acessar a oferta exclusiva.</p>
             </div>
 
-            <form id="form_bb_modal" class="space-y-4 mt-6 popup-form">
+            <form id="form_bb" class="space-y-4 mt-6 popup-form">
                 <div>
                     <label for="lead-nome" class="block text-sm font-medium text-gray-400 mb-1">Nome</label>
                     <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo"
@@ -823,7 +821,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
 
-            const WEBHOOK_URL = 'https://hook.us1.make.com/bj1q14346ezeybpcqjb9ctea89aoatvn?produto=I-BB5';
+            const WEBHOOK_URL = 'https://hook.us1.make.com/t5rdmgsbkvyqy5xisoobb4scyskaa5lt?produto=MPA';
             const REDIRECT_URL = 'https://sun.eduzz.com/39VEA7GKWR';
             const PRODUTO_NOME = 'BodyBuilding 5';
 
